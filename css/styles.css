@@ -2,6 +2,7 @@
   --main-color: #757575;
   --title-color: #212121;
   --accent-color: #2196f3;
+  --btn-accent: #188ce8;
   --white: #ffffff;
   --dark-bg: #2f303a;
   --grey: #f5f4fa;
@@ -136,14 +137,14 @@ address {
 .btn:focus {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: rgba(33, 150, 243, 0.75);
+  background-color: var(--btn-accent);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .btn:active {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: rgba(33, 150, 243, 0.5);
+  background-color: var(--btn-accent);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -557,10 +558,7 @@ address {
 
 .footer .container {
   display: flex;
-}
-
-.footer-social {
-  margin-left: 70px;
+  justify-content: space-between;
 }
 
 .footer-social .title {
@@ -569,6 +567,7 @@ address {
   font-weight: 700;
   line-height: 1.143;
   text-transform: uppercase;
+  color: var(--white);
 }
 
 .footer-social .social-icons-svg {
@@ -577,6 +576,60 @@ address {
 
 .footer-icons-link {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-form .title {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.143;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.email-field {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.email-field::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sub-btn {
+  position: relative;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  min-width: 200px;
+  padding-top: 10px;
+  padding-right: 62px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  background-color: var(--accent-color);
+  color: var(--white);
+  color: var(--white);
+  background-color: var(--accent-color);
+}
+
+.sub-btn::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icons/sub-icon.svg);
 }
 
 .portfolio {
@@ -624,10 +677,6 @@ address {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .portfolio-photo {
-  margin-bottom: 20px;
-} */
 
 .portfolio-thumb {
   position: relative;
@@ -701,6 +750,181 @@ address {
   border-radius: 4px;
 }
 
+.modal-title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-field {
+  margin-bottom: 10px;
+}
+
+.tel-field {
+  margin-bottom: 10px;
+}
+
+.email-form-field {
+  margin-bottom: 10px;
+}
+
+.comment-field {
+  margin-bottom: 20px;
+}
+
+.comment-field .comment-input {
+  padding: 12px 16px;
+}
+
+.comment-input {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+}
+
+.comment-input::placeholder {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.policy-field {
+  margin-bottom: 30px;
+}
+
+.btn-field {
+  text-align: center;
+}
+
+.modal-submit-btn {
+  padding: 10px 55px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.lable {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.01em;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding-top: 12px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper:focus-within > .modal-icon {
+  fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-wrapper:focus-within > .input {
+  outline: none;
+  border: 1px solid var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.name-icon {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  width: 12px;
+  height: 12px;
+}
+
+.tel-icon {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  width: 13px;
+  height: 13px;
+}
+
+.mail-icon {
+  position: absolute;
+  top: 14px;
+  left: 13.5px;
+  width: 15px;
+  height: 12px;
+}
+
+.comment-field .comment-input {
+  height: 120px;
+  resize: none;
+}
+
+.comment-field:focus-within .comment-input {
+  outline: none;
+  border: 1px solid var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-lable {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.71;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../images/icons/check-icon.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.policy-link {
+  color: var(--accent-color);
+  margin-left: 4px;
+}
+
 .modal-close-btn {
   position: absolute;
   top: 8px;
@@ -725,14 +949,16 @@ address {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
-  fill: var(--white);
+  fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn-icon {
