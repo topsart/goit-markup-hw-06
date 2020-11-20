@@ -450,7 +450,7 @@
 					<div class="name-field">
 						<label class="lable" for="name">Имя</label>
 						<div class="input-wrapper">
-							<input class="input" type="text" name="name" id="name" placeholder=" ">
+							<input class="input" type="text" name="name" id="name" placeholder=" " required>
 							<svg class="modal-icon name-icon">
 								<use href="./images/sprite.svg#form-name-icon"></use>
 							</svg>
@@ -460,7 +460,7 @@
 					<div class="tel-field">
 						<label class="lable" for="tel">Телефон</label>
 						<div class="input-wrapper">
-							<input class="input" type="tel" name="tel" id="tel">
+							<input class="input" type="tel" name="tel" id="tel" required>
 							<svg class="modal-icon tel-icon">
 								<use href="./images/sprite.svg#form-tel-icon"></use>
 							</svg>
@@ -470,7 +470,7 @@
 					<div class="email-form-field">
 						<label class="lable" for="email">Почта</label>
 						<div class="input-wrapper">
-							<input class="input" type="email" name="email" id="email">
+							<input class="input" type="email" name="email" id="email" required>
 							<svg class="modal-icon mail-icon">
 								<use href="./images/sprite.svg#form-mail-icon"></use>
 							</svg>
@@ -484,14 +484,14 @@
 
 					<div class="policy-field">						
 						<label class="policy-lable" for="policy">
-							<input class="checkbox" type="checkbox" name="policy" id="policy">
+							<input class="checkbox" type="checkbox" name="policy" id="policy" required>
 							<span class="checkbox-icon"></span>
 							Соглашаюсь с рассылкой и принимаю<a class="policy-link" href="">Условия договора</a>
 						</label>
 					</div>
-
+					
 					<div class="btn-field">
-						<button class="btn modal-submit-btn" type="submit">Отправить</button>
+						<button class="btn modal-submit-btn" type="submit" onmousedown="viewDiv()">Отправить</button>
 					</div>
 					<button type="button" class="modal-close-btn" data-modal-close>
 						<svg class="modal-close-btn-icon">
@@ -503,5 +503,6 @@
 		</div>
 		<!-- Скрипт модалки -->
 		<script src="./js/modal.js"></script>
+		<script src="./js/hint.js"></script>
   	</body>
 </html>
