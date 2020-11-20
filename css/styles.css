@@ -908,6 +908,8 @@ address {
   background-image: url(../images/icons/check-icon.svg);
   background-size: contain;
   background-origin: border-box;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-icon {
